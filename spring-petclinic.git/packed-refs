@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled 
+694390d0c2d80624f499ba4feea3ab1d598f009d refs/heads/Cobertura
+5a5ccf625a50f336f24e683b2d6d7a23d04acc4d refs/heads/Spring-Security
+1a6d710e273767ac832f94870133bda724382dd7 refs/heads/angularjs
+b0c1d7a0eccf7e26e6c48fb3b3271b06ba1b0271 refs/heads/javaconfig
+9df68260c10208b2e455ead8a1977f87f2c0e5bb refs/heads/jqa-remote
+cb8d500170b7d56bfb36b450b1efc595abc0efbf refs/heads/master
+e65ac6861218b48a8734a5b93b34e3bbdb17d21f refs/heads/training
+f5a0f50c762c3d84d938149ddae4253106e35340 refs/heads/violations
+db2f5d958f403498653a341d4f0198a022855458 refs/pull/1/head
+5dade92c05213b691c5a983a3da215987fd6300a refs/pull/2/head
+756f311d3cff32f9d8ff4af718affea7cd88149c refs/pull/3/head
+4b533167c7db6ca3d4fd17e2bcd133528b5ae033 refs/pull/3/merge

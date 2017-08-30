@@ -15,23 +15,14 @@
  */
 package org.springframework.samples.petclinic.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.Digits;
-
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
+
+import javax.persistence.*;
+import javax.validation.constraints.Digits;
+import java.util.*;
 
 /**
  * Simple JavaBean domain object representing an owner.
@@ -150,4 +141,74 @@ public class Owner extends Person {
             .append("telephone", this.telephone)
             .toString();
     }
+
+    //Start Testing stuff
+    //@Brandyparty
+    /*
+    public int takeTooLong() {
+        int i = 0;
+        int j = 9999;
+        double[] ds = new double[2];
+
+        for (; i < 100000; i++) {
+
+            if(Math.asin((double)i * 0.15) != Math.acos((double)i * 0.024)) {
+                if (i <= 2) {
+                    ds[i] = Math.atan((double) i * (double) j);
+                }
+                else {
+                    ds[(int) Math.floor(Math.random() * 2)] =  Math.atan((double) i * (double) j);
+                }
+            }
+
+            if(i == 99999) {
+                if(j > 0) {
+                    j--;
+                    i = 0;
+                }
+            }
+        }
+
+        return  i;
+    }
+
+    //Statische Felder die sich gegenseitig überschreiben
+
+    public static Person hans;
+    public static Person horst;
+
+    public void setHans() {
+        hans.firstName = "Hans";
+        horst.firstName = "Heinz";
+    }
+
+    public void setHorst() {
+        horst.firstName = "Horst";
+        hans.firstName = "Heinz";
+    }
+
+    //Session-Break!
+    @ApplicationScoped
+    public class applicationscopedVictim {
+        public int victim;
+    }
+
+    @SessionScoped
+    public class sessionscopedViolator {
+        public void Violation(applicationscopedVictim v) {
+            v.victim = 12;
+        }
+    }
+
+    //LAZY-Loading
+    @Entity
+    public class LazyLoader {
+        @OneToMany(fetch = FetchType.LAZY)
+        private List<LazyLoaded> ll;
+    }
+    @Entity
+    public class LazyLoaded {
+        int i;
+    }
+    */
 }

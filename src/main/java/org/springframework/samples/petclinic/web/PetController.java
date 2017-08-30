@@ -27,8 +27,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.validation.Valid;
-
 import java.util.Collection;
 
 /**
@@ -37,10 +37,12 @@ import java.util.Collection;
  * @author Arjen Poutsma
  */
 @Controller
+@ApplicationScoped
 @RequestMapping("/owners/{ownerId}")
 public class PetController {
 
-    private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
+    //Brandyparty: private static final
+    public static String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
     private final ClinicService clinicService;
 
     @Autowired
@@ -73,12 +75,14 @@ public class PetController {
         Pet pet = new Pet();
         owner.addPet(pet);
         model.put("pet", pet);
+        //Brandyparty
+        OwnerController.VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "something else";
         return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
     }
 
     @RequestMapping(value = "/pets/new", method = RequestMethod.POST)
     public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model) {
-        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null){
+        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null) {
             result.rejectValue("name", "duplicate", "already exists");
         }
         if (result.hasErrors()) {

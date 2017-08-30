@@ -15,11 +15,6 @@
  */
 package org.springframework.samples.petclinic.web;
 
-import java.util.Collection;
-import java.util.Map;
-
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.service.ClinicService;
@@ -33,6 +28,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.enterprise.context.SessionScoped;
+import javax.validation.Valid;
+import java.util.Collection;
+import java.util.Map;
+
 /**
  * @author Juergen Hoeller
  * @author Ken Krebs
@@ -40,9 +40,11 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Michael Isvy
  */
 @Controller
+@SessionScoped
 public class OwnerController {
 
-    private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
+    //Brandyparty: private
+    public static String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
     private final ClinicService clinicService;
 
 
@@ -108,6 +110,8 @@ public class OwnerController {
     public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
         Owner owner = this.clinicService.findOwnerById(ownerId);
         model.addAttribute(owner);
+        //Brandyparty
+        PetController.VIEWS_PETS_CREATE_OR_UPDATE_FORM = "Folder changed";
         return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
     }
 

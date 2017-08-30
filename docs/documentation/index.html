@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-<meta charset="UTF-8"/>
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="generator" content="Asciidoctor 1.5.3"/>
-<title>Spring PetClinic Coding Rules</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
-<style>
+    <meta charset="UTF-8"/>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="Asciidoctor 1.5.3"/>
+    <title>Spring PetClinic Coding Rules</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
+    <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove comment around @import statement below when using as a custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
@@ -415,8 +417,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
-</style>
-<style>
+
+    </style>
+    <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
@@ -506,215 +509,226 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}
-</style>
+
+    </style>
 </head>
 <body class="article">
 <div id="header">
-<h1>Spring PetClinic Coding Rules</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_ci_build">1. CI Build</a></li>
-<li><a href="#structure:Default">2. Structural Rules And Reports</a>
-<ul class="sectlevel2">
-<li><a href="#_layers_and_elements">2.1. Layers And Elements</a></li>
-<li><a href="#_constraints">2.2. Constraints</a>
-<ul class="sectlevel3">
-<li><a href="#_general">2.2.1. General</a></li>
-<li><a href="#_ui">2.2.2. UI</a></li>
-<li><a href="#_logic">2.2.3. Logic</a></li>
-<li><a href="#_persistence">2.2.4. Persistence</a></li>
-</ul>
-</li>
-<li><a href="#_concepts">2.3. Concepts</a></li>
-<li><a href="#_reports">2.4. Reports</a></li>
-</ul>
-</li>
-<li><a href="#model:Default">3. JPA Model</a>
-<ul class="sectlevel2">
-<li><a href="#_constraints_2">3.1. Constraints</a></li>
-</ul>
-</li>
-<li><a href="#management:Default">4. Management</a>
-<ul class="sectlevel2">
-<li><a href="#_reports_2">4.1. Reports</a></li>
-</ul>
-</li>
-<li><a href="#test:Default">5. Test Rules</a>
-<ul class="sectlevel2">
-<li><a href="#_constraints_3">5.1. Constraints</a></li>
-<li><a href="#_concepts_2">5.2. Concepts</a></li>
-</ul>
-</li>
-<li><a href="#_spring_mvc_rules">6. Spring MVC Rules</a>
-<ul class="sectlevel2">
-<li><a href="#_concepts_3">6.1. Concepts</a></li>
-</ul>
-</li>
-<li><a href="#_spring_data_rules">7. Spring Data Rules</a>
-<ul class="sectlevel2">
-<li><a href="#_concepts_4">7.1. Concepts</a></li>
-</ul>
-</li>
-<li><a href="#_spring_jmx_rules">8. Spring JMX Rules</a>
-<ul class="sectlevel2">
-<li><a href="#_concepts_5">8.1. Concepts</a></li>
-</ul>
-</li>
-</ul>
-</div>
+    <h1>Spring PetClinic Coding Rules</h1>
+    <div id="toc" class="toc">
+        <div id="toctitle">Table of Contents</div>
+        <ul class="sectlevel1">
+            <li><a href="#_ci_build">1. CI Build</a></li>
+            <li><a href="#structure:Default">2. Structural Rules And Reports</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_layers_and_elements">2.1. Layers And Elements</a></li>
+                    <li><a href="#_constraints">2.2. Constraints</a>
+                        <ul class="sectlevel3">
+                            <li><a href="#_general">2.2.1. General</a></li>
+                            <li><a href="#_ui">2.2.2. UI</a></li>
+                            <li><a href="#_logic">2.2.3. Logic</a></li>
+                            <li><a href="#_persistence">2.2.4. Persistence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#_concepts">2.3. Concepts</a></li>
+                    <li><a href="#_reports">2.4. Reports</a></li>
+                </ul>
+            </li>
+            <li><a href="#model:Default">3. JPA Model</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_constraints_2">3.1. Constraints</a></li>
+                </ul>
+            </li>
+            <li><a href="#management:Default">4. Management</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_reports_2">4.1. Reports</a></li>
+                </ul>
+            </li>
+            <li><a href="#test:Default">5. Test Rules</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_constraints_3">5.1. Constraints</a></li>
+                    <li><a href="#_concepts_2">5.2. Concepts</a></li>
+                </ul>
+            </li>
+            <li><a href="#_spring_mvc_rules">6. Spring MVC Rules</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_concepts_3">6.1. Concepts</a></li>
+                </ul>
+            </li>
+            <li><a href="#_spring_data_rules">7. Spring Data Rules</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_concepts_4">7.1. Concepts</a></li>
+                </ul>
+            </li>
+            <li><a href="#_spring_jmx_rules">8. Spring JMX Rules</a>
+                <ul class="sectlevel2">
+                    <li><a href="#_concepts_5">8.1. Concepts</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document describes coding rules for the Spring PetClinic.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The rules defined in this and all included documents are for demonstration purposes only and work in progress. For
-rendering of embedded diagrams <a href="http://www.graphviz.org">Graphviz</a> needs to be installed and available via the system path.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ci_build">1. CI Build</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following rule groups are executed during a build:</p>
-</div>
-<div id="default" class="ulist group">
-<ul>
-<li>
-<p><a href="#structure:Default">Structural Rules And Reports</a></p>
-</li>
-<li>
-<p><a href="#model:Default">JPA Model</a></p>
-</li>
-<li>
-<p><a href="#management:Default">Management</a></p>
-</li>
-<li>
-<p><a href="#test:Default">Test Rules</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1 group">
-<h2 id="structure:Default">2. Structural Rules And Reports</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following constraints are verified:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#structure:ControllerDependencies">A controller can only have dependencies to services (e.g. direct usage of repositories is not allowed).</a></p>
-</li>
-<li>
-<p><a href="#structure:ServiceDependencies">A service can only have dependencies to repositories or other services (e.g. usage of controllers is not allowed).</a></p>
-</li>
-<li>
-<p><a href="#structure:RepositoryDependencies">A repository can only have dependencies to other repositories.</a></p>
-</li>
-<li>
-<p><a href="#structure:ImplementationDependencies">There must be no direct dependencies between Spring component implementations, i.e. only dependencies to interfaces are allowed.</a></p>
-</li>
-<li>
-<p>Package cycles</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The following GraphML reports are created:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#structure:LayerDependencies.graphml">Actual usage dependencies between the application layers, i.e. controller, service and repository implementations.</a></p>
-</li>
-<li>
-<p><a href="#structure:PackageDependencies.graphml">Dependencies between packages and their contained types.</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_layers_and_elements">2.1. Layers And Elements</h3>
-<div class="paragraph">
-<p>The application consists of the following layers:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/class-diagram.png" alt="class diagram" width="627" height="573"/>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>UI</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Controller implementations</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Logic</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Service interfaces and implementations</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Persistence</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Repository interfaces and implementations</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Spring Data (interface declaration only)</p>
-</li>
-<li>
-<p>JPA</p>
-</li>
-<li>
-<p>JDBC</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_constraints">2.2. Constraints</h3>
-<div class="paragraph">
-<p>The following sections describe restrictions on dependencies between these layers.</p>
-</div>
-<div class="sect3">
-<h4 id="_general">2.2.1. General</h4>
-<div id="structure:ImplementationDependencies" class="listingblock constraint">
-<div class="title">There must be no direct dependencies between Spring component implementations, i.e. only dependencies to interfaces are allowed.</div>
-<div class="content">
+    <div id="preamble">
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>This document describes coding rules for the Spring PetClinic.</p>
+            </div>
+            <div class="admonitionblock note">
+                <table>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Note</div>
+                        </td>
+                        <td class="content">
+                            The rules defined in this and all included documents are for demonstration purposes only and
+                            work in progress. For
+                            rendering of embedded diagrams <a href="http://www.graphviz.org">Graphviz</a> needs to be
+                            installed and available via the system path.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="sect1">
+        <h2 id="_ci_build">1. CI Build</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>The following rule groups are executed during a build:</p>
+            </div>
+            <div id="default" class="ulist group">
+                <ul>
+                    <li>
+                        <p><a href="#structure:Default">Structural Rules And Reports</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#model:Default">JPA Model</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#management:Default">Management</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#test:Default">Test Rules</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sect1 group">
+        <h2 id="structure:Default">2. Structural Rules And Reports</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>The following constraints are verified:</p>
+            </div>
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><a href="#structure:ControllerDependencies">A controller can only have dependencies to
+                            services (e.g. direct usage of repositories is not allowed).</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#structure:ServiceDependencies">A service can only have dependencies to repositories
+                            or other services (e.g. usage of controllers is not allowed).</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#structure:RepositoryDependencies">A repository can only have dependencies to other
+                            repositories.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#structure:ImplementationDependencies">There must be no direct dependencies between
+                            Spring component implementations, i.e. only dependencies to interfaces are allowed.</a></p>
+                    </li>
+                    <li>
+                        <p>Package cycles</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="paragraph">
+                <p>The following GraphML reports are created:</p>
+            </div>
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><a href="#structure:LayerDependencies.graphml">Actual usage dependencies between the
+                            application layers, i.e. controller, service and repository implementations.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#structure:PackageDependencies.graphml">Dependencies between packages and their
+                            contained types.</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sect2">
+                <h3 id="_layers_and_elements">2.1. Layers And Elements</h3>
+                <div class="paragraph">
+                    <p>The application consists of the following layers:</p>
+                </div>
+                <div class="imageblock">
+                    <div class="content">
+                        <img src="images/class-diagram.png" alt="class diagram" width="627" height="573"/>
+                    </div>
+                </div>
+                <div class="ulist">
+                    <ul>
+                        <li>
+                            <p>UI</p>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>Controller implementations</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Logic</p>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>Service interfaces and implementations</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Persistence</p>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>Repository interfaces and implementations</p>
+                                        <div class="ulist">
+                                            <ul>
+                                                <li>
+                                                    <p>Spring Data (interface declaration only)</p>
+                                                </li>
+                                                <li>
+                                                    <p>JPA</p>
+                                                </li>
+                                                <li>
+                                                    <p>JDBC</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sect2">
+                <h3 id="_constraints">2.2. Constraints</h3>
+                <div class="paragraph">
+                    <p>The following sections describe restrictions on dependencies between these layers.</p>
+                </div>
+                <div class="sect3">
+                    <h4 id="_general">2.2.1. General</h4>
+                    <div id="structure:ImplementationDependencies" class="listingblock constraint">
+                        <div class="title">There must be no direct dependencies between Spring component
+                            implementations, i.e. only dependencies to interfaces are allowed.
+                        </div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Component)-[:DECLARES]-&gt;(:Method)-[:INVOKES]-&gt;(:Method)&lt;-[:DECLARES]-(otherType:Spring:Component)
 WHERE
@@ -722,19 +736,20 @@ WHERE
   and not otherType:Interface
 RETURN DISTINCT
   type as Dependent, otherType as InvalidDependency</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_ui">2.2.2. UI</h4>
-<div class="paragraph">
-<p>The server side UI implementation is based on Spring MVC controllers:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example controller</div>
-<div class="content">
+                        </div>
+                    </div>
+                </div>
+                <div class="sect3">
+                    <h4 id="_ui">2.2.2. UI</h4>
+                    <div class="paragraph">
+                        <p>The server side UI implementation is based on Spring MVC controllers:</p>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example controller</div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Controller</span>
-<span class="annotation">@RequestMapping</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">/resource</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@RequestMapping</span>(<span class="string"><span class="delimiter">&quot;</span><span
+            class="content">/resource</span><span class="delimiter">&quot;</span></span>)
 <span class="directive">public</span> <span class="type">class</span> <span class="class">MyController</span> {
 
     <span class="directive">private</span> <span class="directive">final</span> MyService service;
@@ -744,42 +759,48 @@ RETURN DISTINCT
         <span class="local-variable">this</span>.myService = myService;
     }
 
-    <span class="annotation">@RequestMapping</span>(value = <span class="string"><span class="delimiter">&quot;</span><span class="content">/</span><span class="delimiter">&quot;</span></span>, method = RequestMethod.GET)
+    <span class="annotation">@RequestMapping</span>(value = <span class="string"><span
+            class="delimiter">&quot;</span><span class="content">/</span><span class="delimiter">&quot;</span></span>, method = RequestMethod.GET)
     <span class="directive">public</span> <span class="predefined-type">String</span> get() {
     }
 }</code></pre>
-</div>
-</div>
-<div id="structure:ControllerDependencies" class="listingblock constraint">
-<div class="title">A controller can only have dependencies to services (e.g. direct usage of repositories is not allowed).</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div id="structure:ControllerDependencies" class="listingblock constraint">
+                        <div class="title">A controller can only have dependencies to services (e.g. direct usage of
+                            repositories is not allowed).
+                        </div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Controller)-[:USES]-&gt;(otherType:Spring:Component)
 WHERE NOT
   otherType:Service
 RETURN DISTINCT
   type as InvalidController, otherType as Dependency</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_logic">2.2.3. Logic</h4>
-<div class="paragraph">
-<p>The business logic consists of services which are defined by interfaces and implemented by classes annotated with @Service:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example service interface</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">MyService</span> {
+                        </div>
+                    </div>
+                </div>
+                <div class="sect3">
+                    <h4 id="_logic">2.2.3. Logic</h4>
+                    <div class="paragraph">
+                        <p>The business logic consists of services which are defined by interfaces and implemented by
+                            classes annotated with @Service:</p>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example service interface</div>
+                        <div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span
+        class="type">interface</span> <span class="class">MyService</span> {
     <span class="predefined-type">Collection</span>&lt;Foo&gt; findFoos() <span class="directive">throws</span> DataAccessException;
 }</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example service implementation</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example service implementation</div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Service</span>
-<span class="directive">public</span> <span class="type">class</span> <span class="class">MyServiceImpl</span> <span class="directive">implements</span> MyService {
+<span class="directive">public</span> <span class="type">class</span> <span class="class">MyServiceImpl</span> <span
+            class="directive">implements</span> MyService {
 
     <span class="directive">private</span> FooRepository fooRepository;
 
@@ -788,11 +809,13 @@ RETURN DISTINCT
         <span class="local-variable">this</span>.fooRepository = fooRepository;
     }
 }</code></pre>
-</div>
-</div>
-<div id="structure:ServiceDependencies" class="listingblock constraint">
-<div class="title">A service can only have dependencies to repositories or other services (e.g. usage of controllers is not allowed).</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div id="structure:ServiceDependencies" class="listingblock constraint">
+                        <div class="title">A service can only have dependencies to repositories or other services (e.g.
+                            usage of controllers is not allowed).
+                        </div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Service)-[:USES]-&gt;(otherType:Spring:Component)
 WHERE NOT (
@@ -801,57 +824,67 @@ WHERE NOT (
 )
 RETURN DISTINCT
   type as InvalidService, otherType as Dependency</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_persistence">2.2.4. Persistence</h4>
-<div class="paragraph">
-<p>Repositories provide access to the database and are defined by interfaces (one per model element):</p>
-</div>
-<div class="listingblock">
-<div class="title">Example repository interface</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">FooRepository</span> {
+                        </div>
+                    </div>
+                </div>
+                <div class="sect3">
+                    <h4 id="_persistence">2.2.4. Persistence</h4>
+                    <div class="paragraph">
+                        <p>Repositories provide access to the database and are defined by interfaces (one per model
+                            element):</p>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example repository interface</div>
+                        <div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span
+        class="type">interface</span> <span class="class">FooRepository</span> {
     <span class="predefined-type">Collection</span>&lt;Foo&gt; findFoos() <span class="directive">throws</span> DataAccessException;
 }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>There are three options to provide or implement a repository:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example Spring Data repository</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">SpringDataFooRepository</span> <span class="directive">extends</span> FooRepository, Repository&lt;Foo, <span class="predefined-type">Integer</span>&gt; {
+                        </div>
+                    </div>
+                    <div class="paragraph">
+                        <p>There are three options to provide or implement a repository:</p>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example Spring Data repository</div>
+                        <div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span
+        class="type">interface</span> <span class="class">SpringDataFooRepository</span> <span
+        class="directive">extends</span> FooRepository, Repository&lt;Foo, <span class="predefined-type">Integer</span>&gt; {
 
     <span class="annotation">@Override</span>
-    <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT foo FROM Foo ORDER BY foo.name</span><span class="delimiter">&quot;</span></span>)
+    <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span
+            class="content">SELECT foo FROM Foo ORDER BY foo.name</span><span class="delimiter">&quot;</span></span>)
     <span class="predefined-type">List</span>&lt;Foo&gt; findFoos() <span class="directive">throws</span> DataAccessException;
 }</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example JPA repository</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example JPA repository</div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">class</span> <span class="class">JpaFooRepositoryImpl</span> <span class="directive">implements</span> FooRepository {
+<span class="directive">public</span> <span class="type">class</span> <span
+            class="class">JpaFooRepositoryImpl</span> <span class="directive">implements</span> FooRepository {
 
     <span class="annotation">@PersistenceContext</span>
     <span class="directive">private</span> EntityManager em;
 
     <span class="annotation">@Override</span>
-    <span class="annotation">@SuppressWarnings</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">unchecked</span><span class="delimiter">&quot;</span></span>)
+    <span class="annotation">@SuppressWarnings</span>(<span class="string"><span class="delimiter">&quot;</span><span
+            class="content">unchecked</span><span class="delimiter">&quot;</span></span>)
     <span class="directive">public</span> <span class="predefined-type">List</span>&lt;Foo&gt; findFoos() {
-        <span class="keyword">return</span> <span class="local-variable">this</span>.em.createQuery(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT foo FROM Foo ORDER BY foo.name</span><span class="delimiter">&quot;</span></span>).getResultList();
+        <span class="keyword">return</span> <span class="local-variable">this</span>.em.createQuery(<span
+            class="string"><span class="delimiter">&quot;</span><span class="content">SELECT foo FROM Foo ORDER BY foo.name</span><span
+            class="delimiter">&quot;</span></span>).getResultList();
     }</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example JDBC repository</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div class="listingblock">
+                        <div class="title">Example JDBC repository</div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">class</span> <span class="class">JdbcFooRepositoryImpl</span> <span class="directive">implements</span> Repository {
+<span class="directive">public</span> <span class="type">class</span> <span
+            class="class">JdbcFooRepositoryImpl</span> <span class="directive">implements</span> Repository {
 
     <span class="directive">private</span> NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
@@ -861,33 +894,39 @@ RETURN DISTINCT
     }
 
     <span class="annotation">@Override</span>
-    <span class="directive">public</span> <span class="predefined-type">List</span>&lt;Foo&gt; findFoos() <span class="directive">throws</span> DataAccessException {
-        <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, <span class="predefined-type">Object</span>&gt; params = <span class="keyword">new</span> <span class="predefined-type">HashMap</span>&lt;&gt;();
+    <span class="directive">public</span> <span class="predefined-type">List</span>&lt;Foo&gt; findFoos() <span
+            class="directive">throws</span> DataAccessException {
+        <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, <span
+            class="predefined-type">Object</span>&gt; params = <span class="keyword">new</span> <span
+            class="predefined-type">HashMap</span>&lt;&gt;();
         <span class="keyword">return</span> <span class="local-variable">this</span>.namedParameterJdbcTemplate.query(
-            <span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT id, name FROM foo ORDER BY name</span><span class="delimiter">&quot;</span></span>,
+            <span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT id, name FROM foo ORDER BY name</span><span
+                    class="delimiter">&quot;</span></span>,
             params,
             BeanPropertyRowMapper.newInstance(Foo.class));
     }</code></pre>
-</div>
-</div>
-<div id="structure:RepositoryDependencies" class="listingblock constraint">
-<div class="title">A repository can only have dependencies to other repositories.</div>
-<div class="content">
+                        </div>
+                    </div>
+                    <div id="structure:RepositoryDependencies" class="listingblock constraint">
+                        <div class="title">A repository can only have dependencies to other repositories.</div>
+                        <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Repository)-[:USES]-&gt;(otherType:Spring:Component)
 WHERE NOT
   otherType:Repository
 RETURN DISTINCT
   type as InvalidRepository, otherType as Dependency</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_concepts">2.3. Concepts</h3>
-<div id="structure:LayerDependencies" class="listingblock concept">
-<div class="title">Creates a USES relation between application layer items, i.e. spring components.</div>
-<div class="content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sect2">
+                <h3 id="_concepts">2.3. Concepts</h3>
+                <div id="structure:LayerDependencies" class="listingblock concept">
+                    <div class="title">Creates a USES relation between application layer items, i.e. spring
+                        components.
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Component)-[:DECLARES]-&gt;(:Method)-[:INVOKES]-&gt;(:Method)&lt;-[:DECLARES]-(:Type:Interface)&lt;-[:IMPLEMENTS|EXTENDS*]-(otherType:Spring:Component)
 WHERE
@@ -896,38 +935,43 @@ MERGE
   (type)-[:USES]-&gt;(otherType)
 RETURN
   type as Dependent, collect(distinct otherType.fqn) as Dependencies</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_reports">2.4. Reports</h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Tip</div>
-</td>
-<td class="content">
-GraphML reports may be viewed using <a href="http://www.yworks.com/en/products/yfiles/yed/">yEd</a>. After opening a file you
-should apply a layout, e.g. <span class="menuseq"><span class="menu">Layout</span>&#160;&#9656; <span class="menuitem">Hierarchical</span></span>.
-</td>
-</tr>
-</table>
-</div>
-<div id="structure:LayerDependencies.graphml" class="listingblock concept">
-<div class="title">Actual usage dependencies between the application layers, i.e. controller, service and repository implementations.</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+            <div class="sect2">
+                <h3 id="_reports">2.4. Reports</h3>
+                <div class="admonitionblock tip">
+                    <table>
+                        <tr>
+                            <td class="icon">
+                                <div class="title">Tip</div>
+                            </td>
+                            <td class="content">
+                                GraphML reports may be viewed using <a
+                                    href="http://www.yworks.com/en/products/yfiles/yed/">yEd</a>. After opening a file
+                                you
+                                should apply a layout, e.g. <span class="menuseq"><span class="menu">Layout</span>&#160;&#9656; <span
+                                    class="menuitem">Hierarchical</span></span>.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="structure:LayerDependencies.graphml" class="listingblock concept">
+                    <div class="title">Actual usage dependencies between the application layers, i.e. controller,
+                        service and repository implementations.
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (type:Spring:Component)-[uses:USES]-&gt;(otherType:Spring:Component)
 RETURN
   type as Dependent,
   uses as Uses,
   otherType as Dependency</code></pre>
-</div>
-</div>
-<div id="structure:PackageDependencies.graphml" class="listingblock concept">
-<div class="title">Dependencies between packages and their contained types.</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="structure:PackageDependencies.graphml" class="listingblock concept">
+                    <div class="title">Dependencies between packages and their contained types.</div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (package:Package)-[:CONTAINS]-&gt;(type:Type)
 OPTIONAL MATCH
@@ -938,58 +982,60 @@ RETURN {
   nodes : collect(type),
   relationships : collect(dependsOn)
 } as TypesPerPackage</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 group">
-<h2 id="model:Default">3. JPA Model</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following constraints are verified:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#model:JpaEntityInModelPackage">All JPA entities must be located in packages named "model".</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_constraints_2">3.1. Constraints</h3>
-<div id="model:JpaEntityInModelPackage" class="listingblock constraint">
-<div class="title">All JPA entities must be located in packages named "model".</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1 group">
+        <h2 id="model:Default">3. JPA Model</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>The following constraints are verified:</p>
+            </div>
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><a href="#model:JpaEntityInModelPackage">All JPA entities must be located in packages named
+                            "model".</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sect2">
+                <h3 id="_constraints_2">3.1. Constraints</h3>
+                <div id="model:JpaEntityInModelPackage" class="listingblock constraint">
+                    <div class="title">All JPA entities must be located in packages named "model".</div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (package:Package)-[:CONTAINS]-&gt;(entity:Jpa:Entity)
 WHERE
   package.name &lt;&gt; &quot;model&quot;
 RETURN
   entity AS EntityInWrongPackage</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 group">
-<h2 id="management:Default">4. Management</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following reports are created:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#management:ManagedResources">All managed resources including their attributes and operations.</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_reports_2">4.1. Reports</h3>
-<div id="management:ManagedResources" class="listingblock concept">
-<div class="title">All managed resources including their attributes and operations.</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1 group">
+        <h2 id="management:Default">4. Management</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>The following reports are created:</p>
+            </div>
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><a href="#management:ManagedResources">All managed resources including their attributes and
+                            operations.</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sect2">
+                <h3 id="_reports_2">4.1. Reports</h3>
+                <div id="management:ManagedResources" class="listingblock concept">
+                    <div class="title">All managed resources including their attributes and operations.</div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (managedResource:Type)-[:DECLARES]-&gt;(member)
 WHERE
@@ -997,32 +1043,35 @@ WHERE
   or member:ManagedOperation
 RETURN
   managedResource as ManagedResource, collect(member.name) as Member</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 group">
-<h2 id="test:Default">5. Test Rules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following test rules apply:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#assertj:TestMethodWithoutAssertion">All test methods must perform at least one assertion (within a call hierarchy of max. 3 steps).</a></p>
-</li>
-<li>
-<p>All @Ignore annotations must provide a message</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_constraints_3">5.1. Constraints</h3>
-<div id="assertj:TestMethodWithoutAssertion" class="listingblock constraint">
-<div class="title">All test methods must perform at least one assertion (within a call hierarchy of max. 3 steps).</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1 group">
+        <h2 id="test:Default">5. Test Rules</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>The following test rules apply:</p>
+            </div>
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><a href="#assertj:TestMethodWithoutAssertion">All test methods must perform at least one
+                            assertion (within a call hierarchy of max. 3 steps).</a></p>
+                    </li>
+                    <li>
+                        <p>All @Ignore annotations must provide a message</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sect2">
+                <h3 id="_constraints_3">5.1. Constraints</h3>
+                <div id="assertj:TestMethodWithoutAssertion" class="listingblock constraint">
+                    <div class="title">All test methods must perform at least one assertion (within a call hierarchy of
+                        max. 3 steps).
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (testType:Test:Type)-[:DECLARES]-&gt;(testMethod:Test:Method)
 WHERE
@@ -1030,27 +1079,29 @@ WHERE
 RETURN
   testType AS DeclaringType,
   testMethod AS Method</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_concepts_2">5.2. Concepts</h3>
-<div class="paragraph">
-<p>The following framworks are used to verify assertions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>AssertJ</p>
-</li>
-<li>
-<p>Spring Web Test</p>
-</li>
-</ul>
-</div>
-<div id="assertj:AssertMethod" class="listingblock concept">
-<div class="title">Mark all assertThat methods of 'org.assertj.core.api.Assertions' with "AssertJ" and "Assert".</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+            <div class="sect2">
+                <h3 id="_concepts_2">5.2. Concepts</h3>
+                <div class="paragraph">
+                    <p>The following framworks are used to verify assertions:</p>
+                </div>
+                <div class="ulist">
+                    <ul>
+                        <li>
+                            <p>AssertJ</p>
+                        </li>
+                        <li>
+                            <p>Spring Web Test</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="assertj:AssertMethod" class="listingblock concept">
+                    <div class="title">Mark all assertThat methods of 'org.assertj.core.api.Assertions' with "AssertJ"
+                        and "Assert".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (assertType:Type)-[:DECLARES]-&gt;(assertMethod)
 WHERE
@@ -1060,11 +1111,13 @@ SET
   assertMethod:AssertJ:Assert
 RETURN
   assertMethod</code></pre>
-</div>
-</div>
-<div id="spring-test-web:Assert" class="listingblock concept">
-<div class="title">Mark method "org.springframework.test.web.servlet.ResultActions#andExpect" as "Spring" and "Assert".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-test-web:Assert" class="listingblock concept">
+                    <div class="title">Mark method "org.springframework.test.web.servlet.ResultActions#andExpect" as
+                        "Spring" and "Assert".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (assertType:Type)-[:DECLARES]-&gt;(assertMethod)
 WHERE
@@ -1074,22 +1127,24 @@ SET
   assertMethod:Spring:Assert
 RETURN
   assertMethod</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_spring_mvc_rules">6. Spring MVC Rules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document defines concepts related to the Spring MVC Framework.</p>
-</div>
-<div class="sect2">
-<h3 id="_concepts_3">6.1. Concepts</h3>
-<div id="spring-mvc:Service" class="listingblock concept">
-<div class="title">Labels all types annotated with "org.springframework.stereotype.Service" with "Spring", "Component" and "Service".</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1">
+        <h2 id="_spring_mvc_rules">6. Spring MVC Rules</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>This document defines concepts related to the Spring MVC Framework.</p>
+            </div>
+            <div class="sect2">
+                <h3 id="_concepts_3">6.1. Concepts</h3>
+                <div id="spring-mvc:Service" class="listingblock concept">
+                    <div class="title">Labels all types annotated with "org.springframework.stereotype.Service" with
+                        "Spring", "Component" and "Service".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (service:Type)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1098,11 +1153,13 @@ SET
   service:Spring:Component:Service
 RETURN
   service as Service</code></pre>
-</div>
-</div>
-<div id="spring-mvc:Controller" class="listingblock concept">
-<div class="title">Labels all types annotated with "org.springframework.stereotype.Controller" with "Spring", "Component" and "Controller".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-mvc:Controller" class="listingblock concept">
+                    <div class="title">Labels all types annotated with "org.springframework.stereotype.Controller" with
+                        "Spring", "Component" and "Controller".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (controller:Type)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1111,31 +1168,33 @@ SET
   controller:Spring:Component:Controller
 RETURN
   controller as Controller</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_spring_data_rules">7. Spring Data Rules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document defines concepts related to the Spring Data Framework.</p>
-</div>
-<div class="sect2">
-<h3 id="_concepts_4">7.1. Concepts</h3>
-<div id="spring-data:Repository" class="listingblock concept">
-<div class="title">Returns all repositories.</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1">
+        <h2 id="_spring_data_rules">7. Spring Data Rules</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>This document defines concepts related to the Spring Data Framework.</p>
+            </div>
+            <div class="sect2">
+                <h3 id="_concepts_4">7.1. Concepts</h3>
+                <div id="spring-data:Repository" class="listingblock concept">
+                    <div class="title">Returns all repositories.</div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (repository:Spring:Repository)
 RETURN
   repository as Repository</code></pre>
-</div>
-</div>
-<div id="spring-data:AnnotatedRepository" class="listingblock concept">
-<div class="title">Labels all types annotated with "org.springframework.stereotype.Repository" with "Spring", "Component" and "Repository".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-data:AnnotatedRepository" class="listingblock concept">
+                    <div class="title">Labels all types annotated with "org.springframework.stereotype.Repository" with
+                        "Spring", "Component" and "Repository".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (repository:Type)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1144,11 +1203,13 @@ SET
   repository:Spring:Component:Repository
 RETURN
   repository as Repository</code></pre>
-</div>
-</div>
-<div id="spring-data:ImplementedRepository" class="listingblock concept">
-<div class="title">Labels all types implementing "org.springframework.data.repository.Repository" with "Spring", "Component" and "Repository".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-data:ImplementedRepository" class="listingblock concept">
+                    <div class="title">Labels all types implementing "org.springframework.data.repository.Repository"
+                        with "Spring", "Component" and "Repository".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (repository:Type)-[:EXTENDS|IMPLEMENTS*]-&gt;(superType:Type)
 WHERE
@@ -1159,22 +1220,24 @@ SET
   repository:Spring:Component:Repository
 RETURN
   repository as Repository</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_spring_jmx_rules">8. Spring JMX Rules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document defines concepts related to the Spring JMX Framework.</p>
-</div>
-<div class="sect2">
-<h3 id="_concepts_5">8.1. Concepts</h3>
-<div id="spring-jmx:ManagedResource" class="listingblock concept">
-<div class="title">Labels all types annotated with "org.springframework.jmx.export.annotation.ManagedResource" with "Spring" and "ManagedResource".</div>
-<div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sect1">
+        <h2 id="_spring_jmx_rules">8. Spring JMX Rules</h2>
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p>This document defines concepts related to the Spring JMX Framework.</p>
+            </div>
+            <div class="sect2">
+                <h3 id="_concepts_5">8.1. Concepts</h3>
+                <div id="spring-jmx:ManagedResource" class="listingblock concept">
+                    <div class="title">Labels all types annotated with
+                        "org.springframework.jmx.export.annotation.ManagedResource" with "Spring" and "ManagedResource".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (managedResource:Type)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1183,11 +1246,14 @@ SET
   managedResource:Spring:ManagedResource
 RETURN
   managedResource as ManagedResource</code></pre>
-</div>
-</div>
-<div id="spring-jmx:ManagedAttribute" class="listingblock concept">
-<div class="title">Labels all methods annotated with "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and "ManagedAttribute".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-jmx:ManagedAttribute" class="listingblock concept">
+                    <div class="title">Labels all methods annotated with
+                        "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and
+                        "ManagedAttribute".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (managedAttribute:Method)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1196,11 +1262,14 @@ SET
   managedAttribute:Spring:ManagedAttribute
 RETURN
   managedAttribute as ManagedAttribute</code></pre>
-</div>
-</div>
-<div id="spring-jmx:ManagedOperation" class="listingblock concept">
-<div class="title">Labels all methods annotated with "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and "ManagedOperation".</div>
-<div class="content">
+                    </div>
+                </div>
+                <div id="spring-jmx:ManagedOperation" class="listingblock concept">
+                    <div class="title">Labels all methods annotated with
+                        "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and
+                        "ManagedOperation".
+                    </div>
+                    <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cypher">MATCH
   (managedOperation:Method)-[:ANNOTATED_BY]-&gt;()-[:OF_TYPE]-&gt;(annotationType:Type)
 WHERE
@@ -1209,16 +1278,16 @@ SET
   managedOperation:Spring:ManagedOperation
 RETURN
   managedOperation as ManagedOperation</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="footer">
-<div id="footer-text">
-Last updated 2016-11-16 09:15:37 MEZ
-</div>
+    <div id="footer-text">
+        Last updated 2016-11-16 09:15:37 MEZ
+    </div>
 </div>
 </body>
 </html>

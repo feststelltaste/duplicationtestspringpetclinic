@@ -10,7 +10,9 @@ import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.service.ClinicService;
 
 import java.text.ParseException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 
@@ -60,12 +62,12 @@ public class PetTypeFormatterTests {
      */
     private Collection<PetType> makePetTypes() {
         Collection<PetType> petTypes = new ArrayList<>();
-        petTypes.add(new PetType(){
+        petTypes.add(new PetType() {
             {
                 setName("Dog");
             }
         });
-        petTypes.add(new PetType(){
+        petTypes.add(new PetType() {
             {
                 setName("Bird");
             }
